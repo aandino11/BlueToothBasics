@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		86AB227924705C2B006680C1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86AB227824705C2B006680C1 /* AppDelegate.swift */; };
 		86AB227B24705C2B006680C1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86AB227A24705C2B006680C1 /* SceneDelegate.swift */; };
-		86AB227D24705C2B006680C1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86AB227C24705C2B006680C1 /* ContentView.swift */; };
+		86AB227D24705C2B006680C1 /* DiscoveryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86AB227C24705C2B006680C1 /* DiscoveryView.swift */; };
 		86AB227F24705C2D006680C1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 86AB227E24705C2D006680C1 /* Assets.xcassets */; };
 		86AB228224705C2D006680C1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 86AB228124705C2D006680C1 /* Preview Assets.xcassets */; };
 		86AB228524705C2D006680C1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86AB228324705C2D006680C1 /* LaunchScreen.storyboard */; };
@@ -38,7 +38,7 @@
 		86AB227524705C2B006680C1 /* Bluetooth Basics.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bluetooth Basics.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		86AB227824705C2B006680C1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		86AB227A24705C2B006680C1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		86AB227C24705C2B006680C1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		86AB227C24705C2B006680C1 /* DiscoveryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoveryView.swift; sourceTree = "<group>"; };
 		86AB227E24705C2D006680C1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		86AB228124705C2D006680C1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		86AB228424705C2D006680C1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -101,7 +101,7 @@
 			children = (
 				86AB227824705C2B006680C1 /* AppDelegate.swift */,
 				86AB227A24705C2B006680C1 /* SceneDelegate.swift */,
-				86AB227C24705C2B006680C1 /* ContentView.swift */,
+				86AB227C24705C2B006680C1 /* DiscoveryView.swift */,
 				86AB227E24705C2D006680C1 /* Assets.xcassets */,
 				86AB228324705C2D006680C1 /* LaunchScreen.storyboard */,
 				86AB228624705C2D006680C1 /* Info.plist */,
@@ -269,7 +269,7 @@
 			files = (
 				86AB227924705C2B006680C1 /* AppDelegate.swift in Sources */,
 				86AB227B24705C2B006680C1 /* SceneDelegate.swift in Sources */,
-				86AB227D24705C2B006680C1 /* ContentView.swift in Sources */,
+				86AB227D24705C2B006680C1 /* DiscoveryView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
