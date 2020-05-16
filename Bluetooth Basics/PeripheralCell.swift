@@ -10,7 +10,7 @@ import SwiftUI
 
 struct PeripheralCell: View {
     var body: some View {
-        NavigationLink(destination: Text("Name")) {
+        NavigationLink(destination:  PeripheralDetailView()) {
             Text("RSSI")
             VStack(alignment: .leading) {
                 Text("Peripheral Name")
