@@ -34,7 +34,7 @@ struct ServiceSection: View {
 
 struct CharacteristicCell: View {
     var body: some View {
-        NavigationLink(destination: Text("hello")) {
+        NavigationLink(destination: CharacteristicDetailView()) {
              VStack(alignment: .leading) {
                  Text("Characteristic Name")
                  Text("Characteristic Value")

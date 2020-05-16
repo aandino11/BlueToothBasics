@@ -17,6 +17,7 @@
 		86AB229B24705C2D006680C1 /* Bluetooth_BasicsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86AB229A24705C2D006680C1 /* Bluetooth_BasicsUITests.swift */; };
 		86C9BEDE24706CB90008C161 /* PeripheralCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86C9BEDD24706CB90008C161 /* PeripheralCell.swift */; };
 		86C9BEE0247073190008C161 /* PeripheralDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86C9BEDF247073190008C161 /* PeripheralDetailView.swift */; };
+		86C9BEE224708D9F0008C161 /* CharacteristicDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86C9BEE124708D9F0008C161 /* CharacteristicDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		86AB229C24705C2D006680C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		86C9BEDD24706CB90008C161 /* PeripheralCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeripheralCell.swift; sourceTree = "<group>"; };
 		86C9BEDF247073190008C161 /* PeripheralDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeripheralDetailView.swift; sourceTree = "<group>"; };
+		86C9BEE124708D9F0008C161 /* CharacteristicDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacteristicDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +110,7 @@
 				86AB227C24705C2B006680C1 /* DiscoveryView.swift */,
 				86C9BEDD24706CB90008C161 /* PeripheralCell.swift */,
 				86C9BEDF247073190008C161 /* PeripheralDetailView.swift */,
+				86C9BEE124708D9F0008C161 /* CharacteristicDetailView.swift */,
 				86AB227E24705C2D006680C1 /* Assets.xcassets */,
 				86AB228324705C2D006680C1 /* LaunchScreen.storyboard */,
 				86AB228624705C2D006680C1 /* Info.plist */,
@@ -273,6 +276,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				86C9BEE224708D9F0008C161 /* CharacteristicDetailView.swift in Sources */,
 				86C9BEE0247073190008C161 /* PeripheralDetailView.swift in Sources */,
 				86AB227924705C2B006680C1 /* AppDelegate.swift in Sources */,
 				86AB227B24705C2B006680C1 /* SceneDelegate.swift in Sources */,
