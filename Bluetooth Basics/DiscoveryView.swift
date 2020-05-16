@@ -12,13 +12,7 @@ struct DiscoveryView: View {
     var body: some View {
         NavigationView {
             List(0..<5) { item in
-                NavigationLink(destination: Text("Name")) {
-                    Text("RSSI")
-                    VStack(alignment: .leading) {
-                        Text("Peripheral Name")
-                        Text("Number of Services")
-                    }
-                }
+                PeripheralCell()
             }.navigationBarTitle("Peripherals Nearby")
         }
     }
