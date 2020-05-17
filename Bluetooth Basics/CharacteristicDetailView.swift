@@ -9,30 +9,40 @@
 import SwiftUI
 
 struct CharacteristicDetailView: View {
+    let viewModel: CharacteristicDetailViewModel
+
     var body: some View {
         VStack(alignment: .leading) {
-            Text("Characteristic UUID")
+            Text(viewModel.subHeaderText)
             List {
-                ReadSection()
-                WriteSection()
-                ProperitiesSection()
+                if viewModel.shouldShowReadSection {
+                    ReadSection(readValue: viewModel.readValue)
+                }
+                if viewModel.shouldShowWriteSection {
+                    WriteSection(onWriteValue: viewModel.onWriteValue)
+                }
+                ProperitiesSection(properities: viewModel.characteristicProperities)
             }.listStyle(GroupedListStyle())
-        }.navigationBarTitle("Charateristic Name")
+        }.navigationBarTitle(viewModel.navigationBarTitle)
     }
 }
 
 struct ReadSection: View {
+    let readValue: String
+
     var body: some View {
         Section(header: Text("Read Values")) {
-            Text("Hello")
+            Text(readValue)
         }
     }
 }
 
 struct WriteSection: View {
+    let onWriteValue: (Int) -> ()
+
     var body: some View {
         Section(header: Text("Write Values")) {
-            NavigationLink(destination: WriteValueView()) {
+            NavigationLink(destination: WriteValueView(onWriteValue: onWriteValue)) {
                 Text("Write a new value")
             }
         }
@@ -40,15 +50,24 @@ struct WriteSection: View {
 }
 
 struct ProperitiesSection: View {
+    let properities: [String]
     var body: some View {
         Section(header: Text("Properities")) {
-            Text("Hello")
+            ForEach(properities) { property in
+                Text(property)
+            }
         }
     }
 }
 
 struct CharacteristicDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        CharacteristicDetailView()
+        CharacteristicDetailView(viewModel: CharacteristicDetailViewModel())
+    }
+}
+
+extension String: Identifiable {
+    public var id: ObjectIdentifier {
+        return ObjectIdentifier(self as NSString)
     }
 }

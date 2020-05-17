@@ -40,7 +40,7 @@ struct CharacteristicCell: View {
     let viewModel: CharacteristicCellViewModel
 
     var body: some View {
-        NavigationLink(destination: CharacteristicDetailView()) {
+        NavigationLink(destination: CharacteristicDetailView(viewModel: viewModel.characteristicDetailViewModel)) {
             VStack(alignment: .leading) {
                 Text(viewModel.headerText)
                 Text(viewModel.subHeaderText)

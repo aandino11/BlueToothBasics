@@ -34,4 +34,5 @@ final class ServiceSectionViewModel: Identifiable {
 final class CharacteristicCellViewModel: Identifiable {
     let headerText = "Characteristic Name"
     let subHeaderText = "Characteristic Value"
+    let characteristicDetailViewModel = CharacteristicDetailViewModel()
 }
