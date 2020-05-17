@@ -32,7 +32,9 @@ struct ReadSection: View {
 struct WriteSection: View {
     var body: some View {
         Section(header: Text("Write Values")) {
-            Text("Hello")
+            NavigationLink(destination: WriteValueView()) {
+                Text("Write a new value")
+            }
         }
     }
 }

@@ -18,6 +18,7 @@
 		86C9BEDE24706CB90008C161 /* PeripheralCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86C9BEDD24706CB90008C161 /* PeripheralCell.swift */; };
 		86C9BEE0247073190008C161 /* PeripheralDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86C9BEDF247073190008C161 /* PeripheralDetailView.swift */; };
 		86C9BEE224708D9F0008C161 /* CharacteristicDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86C9BEE124708D9F0008C161 /* CharacteristicDetailView.swift */; };
+		86C9BEE424709A290008C161 /* WriteValueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86C9BEE324709A290008C161 /* WriteValueView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		86C9BEDD24706CB90008C161 /* PeripheralCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeripheralCell.swift; sourceTree = "<group>"; };
 		86C9BEDF247073190008C161 /* PeripheralDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeripheralDetailView.swift; sourceTree = "<group>"; };
 		86C9BEE124708D9F0008C161 /* CharacteristicDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacteristicDetailView.swift; sourceTree = "<group>"; };
+		86C9BEE324709A290008C161 /* WriteValueView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteValueView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +113,7 @@
 				86C9BEDD24706CB90008C161 /* PeripheralCell.swift */,
 				86C9BEDF247073190008C161 /* PeripheralDetailView.swift */,
 				86C9BEE124708D9F0008C161 /* CharacteristicDetailView.swift */,
+				86C9BEE324709A290008C161 /* WriteValueView.swift */,
 				86AB227E24705C2D006680C1 /* Assets.xcassets */,
 				86AB228324705C2D006680C1 /* LaunchScreen.storyboard */,
 				86AB228624705C2D006680C1 /* Info.plist */,
@@ -279,6 +282,7 @@
 				86C9BEE224708D9F0008C161 /* CharacteristicDetailView.swift in Sources */,
 				86C9BEE0247073190008C161 /* PeripheralDetailView.swift in Sources */,
 				86AB227924705C2B006680C1 /* AppDelegate.swift in Sources */,
+				86C9BEE424709A290008C161 /* WriteValueView.swift in Sources */,
 				86AB227B24705C2B006680C1 /* SceneDelegate.swift in Sources */,
 				86AB227D24705C2B006680C1 /* DiscoveryView.swift in Sources */,
 				86C9BEDE24706CB90008C161 /* PeripheralCell.swift in Sources */,
