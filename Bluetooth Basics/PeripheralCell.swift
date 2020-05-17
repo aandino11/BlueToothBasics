@@ -9,12 +9,14 @@
 import SwiftUI
 
 struct PeripheralCell: View {
+    let viewModel: PeripheralCellViewModel
+
     var body: some View {
-        NavigationLink(destination:  PeripheralDetailView()) {
-            Text("RSSI")
+        NavigationLink(destination:  PeripheralDetailView(viewModel: viewModel.peripheralDetailViewModel)) {
+            Text(viewModel.rssiText)
             VStack(alignment: .leading) {
-                Text("Peripheral Name")
-                Text("Number of Services")
+                Text(viewModel.peripheralName)
+                Text(viewModel.numberOfServicesText)
             }
         }
     }
@@ -22,6 +24,6 @@ struct PeripheralCell: View {
 
 struct PeripheralCell_Previews: PreviewProvider {
     static var previews: some View {
-        PeripheralCell()
+        PeripheralCell(viewModel: PeripheralCellViewModel())
     }
 }

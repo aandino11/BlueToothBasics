@@ -10,6 +10,7 @@ import SwiftUI
 
 struct WriteValueView: View {
     @Environment(\.presentationMode) var presentation
+    let onWriteValue: (Int) -> ()
 
     @State private var writtenInt: Int? {
         didSet {
@@ -38,7 +39,8 @@ struct WriteValueView: View {
                 "Value to write...",
                 text: hexNumberProxy
             ) {
-                if self.writtenInt != nil {
+                if let writtenInt =  self.writtenInt {
+                    self.onWriteValue(writtenInt)
                     self.presentation.wrappedValue.dismiss()
                 }
             }
@@ -51,7 +53,7 @@ struct WriteValueView: View {
 
 struct WriteValueView_Previews: PreviewProvider {
     static var previews: some View {
-        WriteValueView()
+        WriteValueView(onWriteValue: { _ in })
     }
 }
 

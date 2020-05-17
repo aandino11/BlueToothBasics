@@ -9,42 +9,48 @@
 import SwiftUI
 
 struct PeripheralDetailView: View {
+    let viewModel: PeripheralDetailViewModel
+
     var body: some View {
         VStack(alignment: .leading) {
-            Text("Peripheral UUID")
+            Text(viewModel.headerText)
             List {
-                ForEach(0..<2) { item in
-                    ServiceSection()
+                ForEach(viewModel.serviceSectionViewModels) { serviceSectionViewModel in
+                    ServiceSection(viewModel: serviceSectionViewModel)
                 }
             }.listStyle(GroupedListStyle())
-        }.navigationBarTitle("Peripheral Name")
+        }.navigationBarTitle(viewModel.navigationBarTitle)
     }
 }
 
 
 struct ServiceSection: View {
+    let viewModel: ServiceSectionViewModel
+
     var body: some View {
-        Section(header: Text("Service Name")) {
-            ForEach(0..<3) { item in
-                CharacteristicCell()
+        Section(header: Text(viewModel.headerText)) {
+            ForEach(viewModel.characteristicCellViewModels) { characteristicCellViewModel in
+                CharacteristicCell(viewModel: characteristicCellViewModel)
             }
         }
     }
 }
 
 struct CharacteristicCell: View {
+    let viewModel: CharacteristicCellViewModel
+
     var body: some View {
-        NavigationLink(destination: CharacteristicDetailView()) {
-             VStack(alignment: .leading) {
-                 Text("Characteristic Name")
-                 Text("Characteristic Value")
-             }
+        NavigationLink(destination: CharacteristicDetailView(viewModel: viewModel.characteristicDetailViewModel)) {
+            VStack(alignment: .leading) {
+                Text(viewModel.headerText)
+                Text(viewModel.subHeaderText)
+            }
         }
     }
 }
 
 struct PeripheralDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        PeripheralDetailView()
+        PeripheralDetailView(viewModel: PeripheralDetailViewModel())
     }
 }

@@ -9,17 +9,19 @@
 import SwiftUI
 
 struct DiscoveryView: View {
+    @ObservedObject private(set) var viewModel: DiscoveryViewModel
+
     var body: some View {
         NavigationView {
-            List(0..<5) { item in
-                PeripheralCell()
-            }.navigationBarTitle("Peripherals Nearby")
+            List(viewModel.peripheralCellViewModels) { viewModel in
+                PeripheralCell(viewModel: viewModel)
+            }.navigationBarTitle(viewModel.navigationBarTitle)
         }
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        DiscoveryView()
+        DiscoveryView(viewModel: DiscoveryViewModel())
     }
 }
