@@ -12,7 +12,7 @@ struct PeripheralCell: View {
     let viewModel: PeripheralCellViewModel
 
     var body: some View {
-        NavigationLink(destination:  PeripheralDetailView()) {
+        NavigationLink(destination:  PeripheralDetailView(viewModel: viewModel.peripheralDetailViewModel)) {
             Text(viewModel.rssiText)
             VStack(alignment: .leading) {
                 Text(viewModel.peripheralName)

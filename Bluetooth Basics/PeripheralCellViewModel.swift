@@ -12,4 +12,5 @@ final class PeripheralCellViewModel: Identifiable {
     let peripheralName = "Peripheral Name"
     let numberOfServicesText = "Number of Services"
     let rssiText = "RSSI"
+    let peripheralDetailViewModel = PeripheralDetailViewModel()
 }
