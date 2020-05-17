@@ -9,12 +9,16 @@
 /* Begin PBXBuildFile section */
 		86AB227924705C2B006680C1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86AB227824705C2B006680C1 /* AppDelegate.swift */; };
 		86AB227B24705C2B006680C1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86AB227A24705C2B006680C1 /* SceneDelegate.swift */; };
-		86AB227D24705C2B006680C1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86AB227C24705C2B006680C1 /* ContentView.swift */; };
+		86AB227D24705C2B006680C1 /* DiscoveryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86AB227C24705C2B006680C1 /* DiscoveryView.swift */; };
 		86AB227F24705C2D006680C1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 86AB227E24705C2D006680C1 /* Assets.xcassets */; };
 		86AB228224705C2D006680C1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 86AB228124705C2D006680C1 /* Preview Assets.xcassets */; };
 		86AB228524705C2D006680C1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86AB228324705C2D006680C1 /* LaunchScreen.storyboard */; };
 		86AB229024705C2D006680C1 /* Bluetooth_BasicsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86AB228F24705C2D006680C1 /* Bluetooth_BasicsTests.swift */; };
 		86AB229B24705C2D006680C1 /* Bluetooth_BasicsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86AB229A24705C2D006680C1 /* Bluetooth_BasicsUITests.swift */; };
+		86C9BEDE24706CB90008C161 /* PeripheralCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86C9BEDD24706CB90008C161 /* PeripheralCell.swift */; };
+		86C9BEE0247073190008C161 /* PeripheralDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86C9BEDF247073190008C161 /* PeripheralDetailView.swift */; };
+		86C9BEE224708D9F0008C161 /* CharacteristicDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86C9BEE124708D9F0008C161 /* CharacteristicDetailView.swift */; };
+		86C9BEE424709A290008C161 /* WriteValueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86C9BEE324709A290008C161 /* WriteValueView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +42,7 @@
 		86AB227524705C2B006680C1 /* Bluetooth Basics.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bluetooth Basics.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		86AB227824705C2B006680C1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		86AB227A24705C2B006680C1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		86AB227C24705C2B006680C1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		86AB227C24705C2B006680C1 /* DiscoveryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoveryView.swift; sourceTree = "<group>"; };
 		86AB227E24705C2D006680C1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		86AB228124705C2D006680C1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		86AB228424705C2D006680C1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +53,10 @@
 		86AB229624705C2D006680C1 /* Bluetooth BasicsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Bluetooth BasicsUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		86AB229A24705C2D006680C1 /* Bluetooth_BasicsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bluetooth_BasicsUITests.swift; sourceTree = "<group>"; };
 		86AB229C24705C2D006680C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		86C9BEDD24706CB90008C161 /* PeripheralCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeripheralCell.swift; sourceTree = "<group>"; };
+		86C9BEDF247073190008C161 /* PeripheralDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeripheralDetailView.swift; sourceTree = "<group>"; };
+		86C9BEE124708D9F0008C161 /* CharacteristicDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacteristicDetailView.swift; sourceTree = "<group>"; };
+		86C9BEE324709A290008C161 /* WriteValueView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteValueView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,7 +109,11 @@
 			children = (
 				86AB227824705C2B006680C1 /* AppDelegate.swift */,
 				86AB227A24705C2B006680C1 /* SceneDelegate.swift */,
-				86AB227C24705C2B006680C1 /* ContentView.swift */,
+				86AB227C24705C2B006680C1 /* DiscoveryView.swift */,
+				86C9BEDD24706CB90008C161 /* PeripheralCell.swift */,
+				86C9BEDF247073190008C161 /* PeripheralDetailView.swift */,
+				86C9BEE124708D9F0008C161 /* CharacteristicDetailView.swift */,
+				86C9BEE324709A290008C161 /* WriteValueView.swift */,
 				86AB227E24705C2D006680C1 /* Assets.xcassets */,
 				86AB228324705C2D006680C1 /* LaunchScreen.storyboard */,
 				86AB228624705C2D006680C1 /* Info.plist */,
@@ -267,9 +279,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				86C9BEE224708D9F0008C161 /* CharacteristicDetailView.swift in Sources */,
+				86C9BEE0247073190008C161 /* PeripheralDetailView.swift in Sources */,
 				86AB227924705C2B006680C1 /* AppDelegate.swift in Sources */,
+				86C9BEE424709A290008C161 /* WriteValueView.swift in Sources */,
 				86AB227B24705C2B006680C1 /* SceneDelegate.swift in Sources */,
-				86AB227D24705C2B006680C1 /* ContentView.swift in Sources */,
+				86AB227D24705C2B006680C1 /* DiscoveryView.swift in Sources */,
+				86C9BEDE24706CB90008C161 /* PeripheralCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
