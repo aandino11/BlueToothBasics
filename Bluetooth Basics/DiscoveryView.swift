@@ -22,6 +22,6 @@ struct DiscoveryView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        DiscoveryView(viewModel: DiscoveryViewModel())
+        DiscoveryView(viewModel: DiscoveryViewModel(bleManager: MockBLEManager()))
     }
 }

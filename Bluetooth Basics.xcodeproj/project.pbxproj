@@ -7,10 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8639FBFC247244CA00113860 /* BLEManaging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8639FBFB247244CA00113860 /* BLEManaging.swift */; };
+		8639FBFE247244FB00113860 /* Peripheral.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8639FBFD247244FB00113860 /* Peripheral.swift */; };
+		8639FC012472456B00113860 /* MockPeripheral.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8639FC002472456B00113860 /* MockPeripheral.swift */; };
+		8639FC03247245A000113860 /* MockBLEManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8639FC02247245A000113860 /* MockBLEManager.swift */; };
+		8639FC052472465800113860 /* CBPeripheral+Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8639FC042472465800113860 /* CBPeripheral+Extentions.swift */; };
+		8639FC072472467B00113860 /* AdveristingPeripheral.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8639FC062472467B00113860 /* AdveristingPeripheral.swift */; };
 		869B1FAA247113D40079E5B1 /* DiscoveryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 869B1FA9247113D40079E5B1 /* DiscoveryViewModel.swift */; };
 		869B1FAC24711DF70079E5B1 /* PeripheralCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 869B1FAB24711DF70079E5B1 /* PeripheralCellViewModel.swift */; };
 		869B1FAE2471C0870079E5B1 /* PeripheralDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 869B1FAD2471C0870079E5B1 /* PeripheralDetailViewModel.swift */; };
 		869B1FB02471E1B60079E5B1 /* CharacteristicDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 869B1FAF2471E1B60079E5B1 /* CharacteristicDetailViewModel.swift */; };
+		869B1FB22471E6F60079E5B1 /* CoreBLEManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 869B1FB12471E6F60079E5B1 /* CoreBLEManager.swift */; };
 		86AB227924705C2B006680C1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86AB227824705C2B006680C1 /* AppDelegate.swift */; };
 		86AB227B24705C2B006680C1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86AB227A24705C2B006680C1 /* SceneDelegate.swift */; };
 		86AB227D24705C2B006680C1 /* DiscoveryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86AB227C24705C2B006680C1 /* DiscoveryView.swift */; };
@@ -43,10 +50,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8639FBFB247244CA00113860 /* BLEManaging.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLEManaging.swift; sourceTree = "<group>"; };
+		8639FBFD247244FB00113860 /* Peripheral.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Peripheral.swift; sourceTree = "<group>"; };
+		8639FC002472456B00113860 /* MockPeripheral.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockPeripheral.swift; sourceTree = "<group>"; };
+		8639FC02247245A000113860 /* MockBLEManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockBLEManager.swift; sourceTree = "<group>"; };
+		8639FC042472465800113860 /* CBPeripheral+Extentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CBPeripheral+Extentions.swift"; sourceTree = "<group>"; };
+		8639FC062472467B00113860 /* AdveristingPeripheral.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdveristingPeripheral.swift; sourceTree = "<group>"; };
 		869B1FA9247113D40079E5B1 /* DiscoveryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoveryViewModel.swift; sourceTree = "<group>"; };
 		869B1FAB24711DF70079E5B1 /* PeripheralCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeripheralCellViewModel.swift; sourceTree = "<group>"; };
 		869B1FAD2471C0870079E5B1 /* PeripheralDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeripheralDetailViewModel.swift; sourceTree = "<group>"; };
 		869B1FAF2471E1B60079E5B1 /* CharacteristicDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacteristicDetailViewModel.swift; sourceTree = "<group>"; };
+		869B1FB12471E6F60079E5B1 /* CoreBLEManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreBLEManager.swift; sourceTree = "<group>"; };
 		86AB227524705C2B006680C1 /* Bluetooth Basics.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bluetooth Basics.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		86AB227824705C2B006680C1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		86AB227A24705C2B006680C1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -92,6 +106,44 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8639FBF92472444C00113860 /* Bluetooth Management */ = {
+			isa = PBXGroup;
+			children = (
+				8639FC08247246A200113860 /* Core Bluetooth */,
+				8639FBFF2472451F00113860 /* Mocks */,
+				8639FBFA247244AD00113860 /* Protocols */,
+				8639FC062472467B00113860 /* AdveristingPeripheral.swift */,
+			);
+			path = "Bluetooth Management";
+			sourceTree = "<group>";
+		};
+		8639FBFA247244AD00113860 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				8639FBFB247244CA00113860 /* BLEManaging.swift */,
+				8639FBFD247244FB00113860 /* Peripheral.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		8639FBFF2472451F00113860 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				8639FC002472456B00113860 /* MockPeripheral.swift */,
+				8639FC02247245A000113860 /* MockBLEManager.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		8639FC08247246A200113860 /* Core Bluetooth */ = {
+			isa = PBXGroup;
+			children = (
+				869B1FB12471E6F60079E5B1 /* CoreBLEManager.swift */,
+				8639FC042472465800113860 /* CBPeripheral+Extentions.swift */,
+			);
+			path = "Core Bluetooth";
+			sourceTree = "<group>";
+		};
 		86AB226C24705C2B006680C1 = {
 			isa = PBXGroup;
 			children = (
@@ -126,6 +178,7 @@
 				86C9BEE124708D9F0008C161 /* CharacteristicDetailView.swift */,
 				869B1FAF2471E1B60079E5B1 /* CharacteristicDetailViewModel.swift */,
 				86C9BEE324709A290008C161 /* WriteValueView.swift */,
+				8639FBF92472444C00113860 /* Bluetooth Management */,
 				86AB227E24705C2D006680C1 /* Assets.xcassets */,
 				86AB228324705C2D006680C1 /* LaunchScreen.storyboard */,
 				86AB228624705C2D006680C1 /* Info.plist */,
@@ -292,15 +345,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				869B1FAC24711DF70079E5B1 /* PeripheralCellViewModel.swift in Sources */,
+				8639FBFE247244FB00113860 /* Peripheral.swift in Sources */,
 				86C9BEE224708D9F0008C161 /* CharacteristicDetailView.swift in Sources */,
 				86C9BEE0247073190008C161 /* PeripheralDetailView.swift in Sources */,
+				8639FBFC247244CA00113860 /* BLEManaging.swift in Sources */,
+				8639FC012472456B00113860 /* MockPeripheral.swift in Sources */,
 				869B1FAE2471C0870079E5B1 /* PeripheralDetailViewModel.swift in Sources */,
+				8639FC03247245A000113860 /* MockBLEManager.swift in Sources */,
+				8639FC052472465800113860 /* CBPeripheral+Extentions.swift in Sources */,
 				869B1FB02471E1B60079E5B1 /* CharacteristicDetailViewModel.swift in Sources */,
 				86AB227924705C2B006680C1 /* AppDelegate.swift in Sources */,
 				86C9BEE424709A290008C161 /* WriteValueView.swift in Sources */,
 				86AB227B24705C2B006680C1 /* SceneDelegate.swift in Sources */,
 				86AB227D24705C2B006680C1 /* DiscoveryView.swift in Sources */,
+				8639FC072472467B00113860 /* AdveristingPeripheral.swift in Sources */,
 				86C9BEDE24706CB90008C161 /* PeripheralCell.swift in Sources */,
+				869B1FB22471E6F60079E5B1 /* CoreBLEManager.swift in Sources */,
 				869B1FAA247113D40079E5B1 /* DiscoveryViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

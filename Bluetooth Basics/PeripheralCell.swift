@@ -9,7 +9,7 @@
 import SwiftUI
 
 struct PeripheralCell: View {
-    let viewModel: PeripheralCellViewModel
+    @ObservedObject var viewModel: PeripheralCellViewModel
 
     var body: some View {
         NavigationLink(destination:  PeripheralDetailView(viewModel: viewModel.peripheralDetailViewModel)) {
@@ -24,6 +24,13 @@ struct PeripheralCell: View {
 
 struct PeripheralCell_Previews: PreviewProvider {
     static var previews: some View {
-        PeripheralCell(viewModel: PeripheralCellViewModel())
+        PeripheralCell(
+            viewModel: PeripheralCellViewModel(
+                peripheral: AdveristingPeripheral(
+                    rssi: 0,
+                    peripheral: MockPeripheral()
+                )
+            )
+        )
     }
 }
