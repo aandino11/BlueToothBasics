@@ -12,11 +12,8 @@ struct DiscoveryView: View {
     @ObservedObject private(set) var viewModel: DiscoveryViewModel
 
     var body: some View {
-        NavigationView {
-            List(viewModel.peripheralCellViewModels) { viewModel in
-                PeripheralCell(viewModel: viewModel)
-            }.navigationBarTitle(viewModel.navigationBarTitle)
-        }
+        // Checkpoint 3
+        Spacer()
     }
 }
 

@@ -40,20 +40,7 @@ final class DiscoveryViewModel: ObservableObject {
             }
             .store(in: &bag)
 
-        bleManager.discoveredPeripheral
-            .filter
-            { peripheral in
-                return !self.hasViewModel(for: peripheral)
-            }
-            .map
-            { peripheral in
-                return PeripheralCellViewModel(peripheral: peripheral)
-            }
-            .sink
-            { viewModel in
-                self.peripheralCellViewModels.append(viewModel)
-            }
-            .store(in: &bag)
+        // Checkpoint 2
     }
 
     private func findViewModel(for peripheral: AdveristingPeripheral) -> PeripheralCellViewModel? {

@@ -62,12 +62,7 @@ final class CoreBLEManager: NSObject, CBCentralManagerDelegate, BLEManaging {
         rssi RSSI: NSNumber
     ) {
         print("Discovered Peripheral: \(peripheral.name ?? "Name Unknown"), RSSI: \(RSSI)")
-        let advertisingPeripheral = AdveristingPeripheral(
-            rssi: Int(truncating: RSSI),
-            peripheral: peripheral
-        )
-        _discoveredPeripheral.send(advertisingPeripheral)
-
+        // Checkpoint 1
     }
 }
 
