@@ -23,23 +23,27 @@ final class DiscoveryViewModel: ObservableObject {
     }
 
     private func bindToBLEManager() {
-        bleManager.onReadyToScan = { [weak self] in
-            self?.bleManager.scanForPeripherals()
-        }
+        bleManager.readyToScan
+            .sink
+            {
+                self.bleManager.scanForPeripherals()
+            }
+            .store(in: &bag)
 
-        // TODO: Clean this up
+        bleManager.discoveredPeripheral
+            .sink
+            { peripheral in
+                guard let foundViewModel = self.findViewModel(for: peripheral) else {
+                    return
+                }
+                foundViewModel.rssiText = String(peripheral.rssi)
+            }
+            .store(in: &bag)
+
         bleManager.discoveredPeripheral
             .filter
             { peripheral in
-                let optionalViewModel = self.peripheralCellViewModels.first {
-                    $0.peripheralIdentifier == peripheral.peripheral.identifier
-                }
-                guard let foundViewModel = optionalViewModel else {
-                    return true
-                }
-                foundViewModel.rssiText = String(peripheral.rssi)
-
-                return false
+                return !self.hasViewModel(for: peripheral)
             }
             .map
             { peripheral in
@@ -50,5 +54,15 @@ final class DiscoveryViewModel: ObservableObject {
                 self.peripheralCellViewModels.append(viewModel)
             }
             .store(in: &bag)
+    }
+
+    private func findViewModel(for peripheral: AdveristingPeripheral) -> PeripheralCellViewModel? {
+        return peripheralCellViewModels.first {
+            $0.peripheralIdentifier == peripheral.peripheral.identifier
+        }
+    }
+
+    private func hasViewModel(for peripheral: AdveristingPeripheral) -> Bool {
+        return findViewModel(for: peripheral) != nil
     }
 }

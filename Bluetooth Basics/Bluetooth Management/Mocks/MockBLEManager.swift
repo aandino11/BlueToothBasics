@@ -10,10 +10,8 @@ import Foundation
 import Combine
 
 final class MockBLEManager: BLEManaging {
-    var onReadyToScan: (() -> Void)? {
-        didSet {
-            onReadyToScan?()
-        }
+    var readyToScan: AnyPublisher<Void, Never> {
+        return PassthroughSubject<Void, Never>().eraseToAnyPublisher()
     }
 
     var discoveredPeripheral: AnyPublisher<AdveristingPeripheral, Never> {

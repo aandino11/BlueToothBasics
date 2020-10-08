@@ -9,7 +9,7 @@
 import Combine
 
 protocol BLEManaging: class {
-    var onReadyToScan: (() -> Void)? { get set }
+    var readyToScan: AnyPublisher<Void, Never> { get }
     var discoveredPeripheral: AnyPublisher<AdveristingPeripheral, Never> { get }
     func scanForPeripherals()
 }

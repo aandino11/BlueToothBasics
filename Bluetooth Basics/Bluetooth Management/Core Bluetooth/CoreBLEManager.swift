@@ -15,7 +15,9 @@ final class CoreBLEManager: NSObject, CBCentralManagerDelegate, BLEManaging {
         return _discoveredPeripheral.eraseToAnyPublisher()
     }
 
-    var onReadyToScan: (() -> Void)?
+    var readyToScan: AnyPublisher<Void, Never> {
+        return _readyToScan.eraseToAnyPublisher()
+    }
 
     private lazy var cbCentralManager: CBCentralManager = {
         return CBCentralManager(
@@ -25,6 +27,7 @@ final class CoreBLEManager: NSObject, CBCentralManagerDelegate, BLEManaging {
     }()
 
     private var _discoveredPeripheral = PassthroughSubject<AdveristingPeripheral, Never>()
+    private var _readyToScan = PassthroughSubject<Void, Never>()
 
     override init() {
         super.init()
@@ -48,7 +51,7 @@ final class CoreBLEManager: NSObject, CBCentralManagerDelegate, BLEManaging {
         print("Current State: \(central.state)")
 
         if central.state == .poweredOn {
-            onReadyToScan?()
+            _readyToScan.send(())
         }
     }
 
