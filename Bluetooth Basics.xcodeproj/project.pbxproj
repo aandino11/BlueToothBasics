@@ -26,6 +26,7 @@
 		86AB228524705C2D006680C1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86AB228324705C2D006680C1 /* LaunchScreen.storyboard */; };
 		86AB229024705C2D006680C1 /* Bluetooth_BasicsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86AB228F24705C2D006680C1 /* Bluetooth_BasicsTests.swift */; };
 		86AB229B24705C2D006680C1 /* Bluetooth_BasicsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86AB229A24705C2D006680C1 /* Bluetooth_BasicsUITests.swift */; };
+		86BFFCFF252F6ACC004C2FFC /* AppHardwareEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86BFFCFE252F6ACC004C2FFC /* AppHardwareEnvironment.swift */; };
 		86C9BEDE24706CB90008C161 /* PeripheralCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86C9BEDD24706CB90008C161 /* PeripheralCell.swift */; };
 		86C9BEE0247073190008C161 /* PeripheralDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86C9BEDF247073190008C161 /* PeripheralDetailView.swift */; };
 		86C9BEE224708D9F0008C161 /* CharacteristicDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86C9BEE124708D9F0008C161 /* CharacteristicDetailView.swift */; };
@@ -75,6 +76,7 @@
 		86AB229624705C2D006680C1 /* Bluetooth BasicsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Bluetooth BasicsUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		86AB229A24705C2D006680C1 /* Bluetooth_BasicsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bluetooth_BasicsUITests.swift; sourceTree = "<group>"; };
 		86AB229C24705C2D006680C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		86BFFCFE252F6ACC004C2FFC /* AppHardwareEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppHardwareEnvironment.swift; sourceTree = "<group>"; };
 		86C9BEDD24706CB90008C161 /* PeripheralCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeripheralCell.swift; sourceTree = "<group>"; };
 		86C9BEDF247073190008C161 /* PeripheralDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeripheralDetailView.swift; sourceTree = "<group>"; };
 		86C9BEE124708D9F0008C161 /* CharacteristicDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacteristicDetailView.swift; sourceTree = "<group>"; };
@@ -131,6 +133,7 @@
 			children = (
 				8639FC002472456B00113860 /* MockPeripheral.swift */,
 				8639FC02247245A000113860 /* MockBLEManager.swift */,
+				86BFFCFE252F6ACC004C2FFC /* AppHardwareEnvironment.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -361,6 +364,7 @@
 				8639FC072472467B00113860 /* AdveristingPeripheral.swift in Sources */,
 				86C9BEDE24706CB90008C161 /* PeripheralCell.swift in Sources */,
 				869B1FB22471E6F60079E5B1 /* CoreBLEManager.swift in Sources */,
+				86BFFCFF252F6ACC004C2FFC /* AppHardwareEnvironment.swift in Sources */,
 				869B1FAA247113D40079E5B1 /* DiscoveryViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
