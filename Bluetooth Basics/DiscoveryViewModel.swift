@@ -7,17 +7,62 @@
 //
 
 import Foundation
+import Combine
 
 final class DiscoveryViewModel: ObservableObject {
     let navigationBarTitle = "Peripherals Nearby"
 
     @Published private(set) var peripheralCellViewModels: [PeripheralCellViewModel] = []
 
-    private let numberOfPeripherals = 5
+    private var bag = Set<AnyCancellable>()
+    private let bleManager: BLEManaging
 
-    init() {
-        peripheralCellViewModels = (0..<numberOfPeripherals).map { _ in
-            return PeripheralCellViewModel()
+    init(bleManager: BLEManaging) {
+        self.bleManager = bleManager
+        bindToBLEManager()
+    }
+
+    private func bindToBLEManager() {
+        bleManager.readyToScan
+            .sink
+            {
+                self.bleManager.scanForPeripherals()
+            }
+            .store(in: &bag)
+
+        bleManager.discoveredPeripheral
+            .sink
+            { peripheral in
+                guard let foundViewModel = self.findViewModel(for: peripheral) else {
+                    return
+                }
+                foundViewModel.rssiText = String(peripheral.rssi)
+            }
+            .store(in: &bag)
+
+        bleManager.discoveredPeripheral
+            .filter
+            { peripheral in
+                return !self.hasViewModel(for: peripheral)
+            }
+            .map
+            { peripheral in
+                return PeripheralCellViewModel(peripheral: peripheral)
+            }
+            .sink
+            { viewModel in
+                self.peripheralCellViewModels.append(viewModel)
+            }
+            .store(in: &bag)
+    }
+
+    private func findViewModel(for peripheral: AdveristingPeripheral) -> PeripheralCellViewModel? {
+        return peripheralCellViewModels.first {
+            $0.peripheralIdentifier == peripheral.peripheral.identifier
         }
+    }
+
+    private func hasViewModel(for peripheral: AdveristingPeripheral) -> Bool {
+        return findViewModel(for: peripheral) != nil
     }
 }
